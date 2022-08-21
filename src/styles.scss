@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --red-color-500: rgb(229, 49, 106);
+    --green-color-500: rgb(44, 230, 155);
+    --basic-color-500: rgb(237, 241, 247);
+}
+
+nb-layout-column {
+    padding: 0 !important;
+}

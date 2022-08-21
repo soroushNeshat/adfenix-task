@@ -1,28 +1,28 @@
 <div class="info">
     <span>Basic Salary</span>
-    <span class="plus">{{ result.basicSalary }} kr</span>
+    <span class="plus">{{ result.basicSalary | number | currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Bonus Salary</span>
-    <span class="plus">{{ result.bonusSalary }} kr</span>
+    <span class="plus">{{ result.bonusSalary | number | currencyUnit }}</span>
 </div>
 <div class="info">
-    <span>Gross Salary 1323123123 </span>
-    <span class="plus">{{ result.grossSalary }} kr</span>
+    <span>Gross Salary</span>
+    <span class="plus">{{ result.grossSalary | number | currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Basic Tax</span>
-    <span class="minus">{{ result.basicTax }} kr</span>
+    <span class="minus">{{ result.basicTax | number | currencyUnit }}</span>
 </div>
 <div class="info">
     <span>High Income Tax</span>
-    <span class="minus">{{ result.highIncomeTax }} kr</span>
+    <span class="minus">{{ result.highIncomeTax | number | currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Total Tax</span>
-    <span class="minus">{{ result.totalTax }} kr</span>
+    <span class="minus">{{ result.totalTax | number | currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Net Salary</span>
-    <span>{{ result.netSalary }} kr</span>
+    <span>{{ result.netSalary | number | currencyUnit  }}</span>
 </div>

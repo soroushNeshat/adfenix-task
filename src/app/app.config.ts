@@ -35,13 +35,14 @@ export type AppConfig = Readonly<{
     basicTaxRates: BasicTaxRates;
     extraHighIncomeTaxRates: ExtraHighIncomeTaxRats;
     salaryIncreaseRates: SalaryIncreaseRates;
+    currencyUnit: string;
 }>;
 
 export const APP_CONFIG = new InjectionToken<AppConfig>('AppConfig');
 
 export const AppConfigValue: AppConfig = {
     basicProfessionSalaries: {
-        Developer: 30000,
+        Developer: 30001,
         Teacher: 27000,
         Cashier: 25000
     },
@@ -64,5 +65,6 @@ export const AppConfigValue: AppConfig = {
         { from: 4, to: 7, increaseRate: 20 },
         { from: 8, to: 10, increaseRate: 40 },
         { from: 11, increaseRate: 60 }
-    ]
+    ],
+    currencyUnit: 'kr'
 };

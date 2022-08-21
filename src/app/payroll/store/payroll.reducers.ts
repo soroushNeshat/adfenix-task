@@ -40,7 +40,7 @@ export const payrollReducer = createReducer(
             return p - taxableAmount * c.taxRate / 100;
         }, 0);
         const totalTax = basicTax + highIncomeTax;
-        const netSalary = grossSalary - totalTax;
+        const netSalary = grossSalary + totalTax;
         return {
             ...state,
             calculationResult: {

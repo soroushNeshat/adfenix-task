@@ -4,7 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbInputModule, NbSelectModule, NbButtonModule, NbCardModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
@@ -17,6 +17,8 @@ import { AppConfigValue, APP_CONFIG } from './app.config';
 import { PayrollCalculationResultComponent } from './payroll/payroll-calculation-result/payroll-calculation-result.component';
 import { environment } from '../environments/environment';
 import { UnsignedIntegerInputComponent } from './shared/unsigned-integer-input/unsigned-integer-input.component';
+import { CurrencyUnitPipe } from './shared/currency-unit.pipe';
+import { ScrollIntoViewOnLoadDirective } from './shared/scroll-into-view-on-load.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UnsignedIntegerInputComponent } from './shared/unsigned-integer-input/u
     PayrollContainerComponent,
     PayrollFormComponent,
     PayrollCalculationResultComponent,
-    UnsignedIntegerInputComponent
+    UnsignedIntegerInputComponent,
+    CurrencyUnitPipe,
+    ScrollIntoViewOnLoadDirective
   ],
   imports: [
     NbCardModule,
