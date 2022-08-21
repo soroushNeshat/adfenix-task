@@ -1,7 +1,7 @@
-import { CalculationResult } from "../models/calculation-result.model";
-import { FormMetadata } from "../models/form-metadata.model";
+import { CalculationResult } from '../models/calculation-result.model';
+import { FormMetadata } from '../models/form-metadata.model';
 
-export const payrollFeatureKey = "payroll";
+export const payrollFeatureKey = 'payroll';
 
 export interface PayrollState {
     formMetadata: FormMetadata;

@@ -1,7 +1,7 @@
-import { createReducer, on } from "@ngrx/store";
-import { first, keys } from "lodash";
-import { calculateResultAction, loadFormMetadataAction } from "./payroll.actions";
-import { payrollInitialState } from "./payroll.state";
+import { createReducer, on } from '@ngrx/store';
+import { first, keys } from 'lodash';
+import { calculateResultAction, loadFormMetadataAction } from './payroll.actions';
+import { payrollInitialState } from './payroll.state';
 
 export const payrollReducer = createReducer(
     payrollInitialState,

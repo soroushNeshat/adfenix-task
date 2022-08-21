@@ -48,12 +48,12 @@ export const AppConfigValue: AppConfig = {
     },
     basicTaxRates: {
         Stockholm: {
-            '2019': 30,
-            '2020': 29
+            2019: 30,
+            2020: 29
         },
         Gothenburg: {
-            '2019': 25,
-            '2020': 22
+            2019: 25,
+            2020: 22
         }
     },
     extraHighIncomeTaxRates: [

@@ -18,7 +18,7 @@ import { selectCalculationResult, selectFormMetadata } from '../store/payroll.se
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PayrollContainerComponent implements OnInit, OnDestroy {
-  private readonly _scrollIntoResultElement = new Subject<void>();
+  private readonly _scrollIntoResultElement$ = new Subject<void>();
   private readonly _scrollIntoResultElementSub: Subscription;
   readonly formMetadata$: Observable<FormMetadata>;
   readonly calculationResult$: Observable<CalculationResult>;
@@ -30,11 +30,11 @@ export class PayrollContainerComponent implements OnInit, OnDestroy {
     private readonly _store: Store<AppState>,
     @Inject(APP_CONFIG) private readonly appConfig: AppConfig
   ) {
-    this._scrollIntoResultElementSub = this._scrollIntoResultElement.pipe(debounceTime(200)).subscribe(() => {
+    this._scrollIntoResultElementSub = this._scrollIntoResultElement$.pipe(debounceTime(200)).subscribe(() => {
       this.resultElementRef?.nativeElement.scrollIntoView({ behavior: 'smooth' });
     });
     this.formMetadata$ = this._store.select(selectFormMetadata);
-    this.calculationResult$ = this._store.select(selectCalculationResult).pipe(tap(() => this._scrollIntoResultElement.next()));
+    this.calculationResult$ = this._store.select(selectCalculationResult).pipe(tap(() => this._scrollIntoResultElement$.next()));
   }
 
   ngOnInit(): void {

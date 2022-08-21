@@ -18,9 +18,10 @@ import { pairwise, startWith } from 'rxjs/operators';
 })
 export class UnsignedIntegerInputComponent implements ControlValueAccessor, OnDestroy {
   @Input() name: string;
-  private _onChange = (value: number) => { };
+
   private readonly _formControlValueChangesSub: Subscription;
   readonly formControl: FormControl;
+  private _onChange = (value: number) => { };
 
   constructor(fb: FormBuilder) {
     this.formControl = fb.control(null);
