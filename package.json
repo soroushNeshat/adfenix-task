@@ -23,8 +23,9 @@
     "@nebular/eva-icons": "5.1.0",
     "@nebular/theme": "^5.1.0",
     "@ngrx/store": "^9.2.1",
-    "lodash": "4.17.15",
+    "@ngrx/store-devtools": "^9.2.1",
     "eva-icons": "^1.1.2",
+    "lodash": "4.17.15",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

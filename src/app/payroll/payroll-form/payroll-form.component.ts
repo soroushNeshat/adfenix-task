@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormData } from '../models/form-data.model';
 import { FormMetadata } from '../models/form-metadata.model';
 
 @Component({
@@ -8,6 +9,7 @@ import { FormMetadata } from '../models/form-metadata.model';
 })
 export class PayrollFormComponent implements OnInit {
   @Input() metadata: FormMetadata;
+  @Output() readonly submit = new EventEmitter<FormData>();
 
   constructor() { }
 

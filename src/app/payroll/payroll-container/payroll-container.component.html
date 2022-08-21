@@ -1,3 +1,5 @@
-<app-payroll-form [metadata]="formMetadata$ | async">
-
+<app-payroll-form *ngIf="formMetadata$ | async as formMetadata" [metadata]="formMetadata" (submit)="formSubmitHandler($event)">
 </app-payroll-form>
+
+<app-payroll-calculation-result *ngIf="calculationResult$ | async as calculationResult" [result]="calculationResult">
+</app-payroll-calculation-result>

@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { first, keys } from "lodash";
-import { loadFormMetadataAction } from "./payroll.actions";
+import { calculateResultAction, loadFormMetadataAction } from "./payroll.actions";
 import { payrollInitialState } from "./payroll.state";
 
 export const payrollReducer = createReducer(
@@ -15,6 +15,15 @@ export const payrollReducer = createReducer(
                 professions,
                 years,
                 cities
+            }
+        };
+    }),
+    on(calculateResultAction, (state, action) => {
+        return {
+            ...state,
+            calculationResult: {
+                grossSalary: 10000,
+                netSalary: 5000
             }
         };
     })

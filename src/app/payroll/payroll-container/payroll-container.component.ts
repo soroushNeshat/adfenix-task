@@ -3,9 +3,11 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppConfig, APP_CONFIG } from 'src/app/app.config';
 import { AppState } from 'src/app/app.state';
+import { CalculationResult } from '../models/calculation-result.model';
+import { FormData } from '../models/form-data.model';
 import { FormMetadata } from '../models/form-metadata.model';
-import { loadFormMetadataAction } from '../store/payroll.actions';
-import { selectFormMetadata } from '../store/payroll.selectors';
+import { calculateResultAction, loadFormMetadataAction } from '../store/payroll.actions';
+import { selectCalculationResult, selectFormMetadata } from '../store/payroll.selectors';
 
 @Component({
   selector: 'app-payroll-container',
@@ -14,17 +16,22 @@ import { selectFormMetadata } from '../store/payroll.selectors';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PayrollContainerComponent implements OnInit {
-
   readonly formMetadata$: Observable<FormMetadata>;
+  readonly calculationResult$: Observable<CalculationResult>;
 
   constructor(
     private readonly store: Store<AppState>,
     @Inject(APP_CONFIG) private readonly appConfig: AppConfig
   ) {
     this.formMetadata$ = store.select(selectFormMetadata);
+    this.calculationResult$ = store.select(selectCalculationResult);
   }
 
   ngOnInit(): void {
     this.store.dispatch(loadFormMetadataAction({ appConfig: this.appConfig }));
+  }
+
+  formSubmitHandler(formData: FormData): void {
+    this.store.dispatch(calculateResultAction({ formData, appConfig: this.appConfig }));
   }
 }

@@ -8,3 +8,8 @@ export const selectFormMetadata = createSelector(
     selectFeature,
     (state: PayrollState) => state.formMetadata
 );
+
+export const selectCalculationResult = createSelector(
+    selectFeature,
+    (state: PayrollState) => state.calculationResult
+);

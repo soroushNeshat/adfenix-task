@@ -1,6 +1,6 @@
 import { InjectionToken } from '@angular/core';
 
-type cities = "stockholm" | "gothenburg";
+type cities = "Stockholm" | "Gothenburg";
 
 type years = '2019' | '2020';
 
@@ -53,12 +53,12 @@ export const AppConfigValue: AppConfig = {
     },
     basicTaxRates: {
         '2019': {
-            stockholm: 30,
-            gothenburg: 25
+            Stockholm: 30,
+            Gothenburg: 25
         },
         '2020': {
-            stockholm: 30,
-            gothenburg: 25
+            Stockholm: 30,
+            Gothenburg: 25
         }
     },
     extraHighIncomeTaxRates: [
