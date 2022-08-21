@@ -2,30 +2,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbInputModule, NbSelectModule, NbButtonModule, NbCardModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { RouterModule } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
 import { PayrollContainerComponent } from './payroll/payroll-container/payroll-container.component';
 import { PayrollFormComponent } from './payroll/payroll-form/payroll-form.component';
-import { PAYROLL_FEATURE_KEY } from './payroll/store/payroll.state';
+import { payrollFeatureKey } from './payroll/store/payroll.state';
 import { payrollReducer } from './payroll/store/payroll.reducers';
 import { AppConfigValue, APP_CONFIG } from './app.config';
 import { PayrollCalculationResultComponent } from './payroll/payroll-calculation-result/payroll-calculation-result.component';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { UnsignedIntegerInputComponent } from './shared/unsigned-integer-input/unsigned-integer-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PayrollContainerComponent,
     PayrollFormComponent,
-    PayrollCalculationResultComponent
+    PayrollCalculationResultComponent,
+    UnsignedIntegerInputComponent
   ],
   imports: [
+    NbCardModule,
+    NbButtonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NbInputModule,
+    NbSelectModule,
     BrowserModule,
-    StoreModule.forRoot({ [PAYROLL_FEATURE_KEY]: payrollReducer }),
+    StoreModule.forRoot({ [payrollFeatureKey]: payrollReducer }),
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,

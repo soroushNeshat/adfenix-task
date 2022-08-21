@@ -1,18 +1,12 @@
 import { InjectionToken } from '@angular/core';
 
-type cities = "Stockholm" | "Gothenburg";
-
-type years = '2019' | '2020';
-
-type professions = 'Developer' | 'Teacher' | 'Cashier';
-
 type BasicTaxRates = Readonly<
     Record<
-        years,
+        string, // city
         Readonly<
             Record<
-                cities,
-                number
+                string, // year
+                number  // tax rate
             >
         >
     >
@@ -26,7 +20,7 @@ type ExtraHighIncomeTaxRats = ReadonlyArray<
     }>
 >;
 
-type BasicProfessionSalaries = Record<professions, number>;
+type BasicProfessionSalaries = Record<string, number>;
 
 type SalaryIncreaseRates = ReadonlyArray<
     Readonly<{
@@ -52,13 +46,13 @@ export const AppConfigValue: AppConfig = {
         Cashier: 25000
     },
     basicTaxRates: {
-        '2019': {
-            Stockholm: 30,
-            Gothenburg: 25
+        Stockholm: {
+            '2019': 30,
+            '2020': 29
         },
-        '2020': {
-            Stockholm: 30,
-            Gothenburg: 25
+        Gothenburg: {
+            '2019': 25,
+            '2020': 22
         }
     },
     extraHighIncomeTaxRates: [

@@ -12,7 +12,7 @@ export class PayrollCalculationResultComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.result);
+
   }
 
 }
