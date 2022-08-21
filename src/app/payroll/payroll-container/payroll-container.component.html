@@ -1,5 +1,12 @@
-<app-payroll-form *ngIf="formMetadata$ | async as formMetadata" [metadata]="formMetadata" (submit)="formSubmitHandler($event)">
-</app-payroll-form>
-
-<app-payroll-calculation-result *ngIf="calculationResult$ | async as calculationResult" [result]="calculationResult">
-</app-payroll-calculation-result>
+<nb-card>
+    <nb-card-body>
+        <app-payroll-form *ngIf="formMetadata$ | async as formMetadata" [metadata]="formMetadata"
+            (formSubmit)="formSubmitHandler($event)">
+        </app-payroll-form>
+        <ng-container *ngIf="calculationResult$ | async as calculationResult">
+            <hr>
+            <app-payroll-calculation-result [result]="calculationResult">
+            </app-payroll-calculation-result>
+        </ng-container>
+    </nb-card-body>
+</nb-card>
