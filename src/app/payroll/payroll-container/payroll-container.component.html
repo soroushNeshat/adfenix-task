@@ -5,7 +5,7 @@
         </app-payroll-form>
         <ng-container *ngIf="calculationResult$ | async as calculationResult">
             <hr>
-            <app-payroll-calculation-result appScrollIntoViewOnLoad [result]="calculationResult">
+            <app-payroll-calculation-result [result]="calculationResult">
             </app-payroll-calculation-result>
         </ng-container>
     </nb-card-body>

@@ -18,7 +18,6 @@ import { PayrollCalculationResultComponent } from './payroll/payroll-calculation
 import { environment } from '../environments/environment';
 import { UnsignedIntegerInputComponent } from './shared/unsigned-integer-input/unsigned-integer-input.component';
 import { CurrencyUnitPipe } from './shared/currency-unit.pipe';
-import { ScrollIntoViewOnLoadDirective } from './shared/scroll-into-view-on-load.directive';
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { ScrollIntoViewOnLoadDirective } from './shared/scroll-into-view-on-load
     PayrollFormComponent,
     PayrollCalculationResultComponent,
     UnsignedIntegerInputComponent,
-    CurrencyUnitPipe,
-    ScrollIntoViewOnLoadDirective
+    CurrencyUnitPipe
   ],
   imports: [
     NbCardModule,
