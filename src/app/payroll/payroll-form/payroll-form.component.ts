@@ -9,7 +9,7 @@ import { FormMetadata } from '../models/form-metadata.model';
 })
 export class PayrollFormComponent implements OnInit {
   @Input() metadata: FormMetadata;
-  @Output() readonly submit = new EventEmitter<FormData>();
+  @Output() readonly formSubmit = new EventEmitter<FormData>();
 
   constructor() { }
 
