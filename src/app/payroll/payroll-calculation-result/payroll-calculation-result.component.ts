@@ -9,4 +9,6 @@ import { CalculationResult } from '../models/calculation-result.model';
 })
 export class PayrollCalculationResultComponent {
   @Input() result: CalculationResult;
+
+  readonly numberPipeConfig = '1.0-1';
 }

@@ -3,7 +3,7 @@ import { first, keys } from 'lodash';
 import { calculateResultAction, loadFormMetadataAction } from './payroll.actions';
 import { payrollInitialState } from './payroll.state';
 
-export const payrollReducer = createReducer(
+export const payrollReducers = createReducer(
     payrollInitialState,
     on(loadFormMetadataAction, (state, { appConfig }) => {
         const professions = keys(appConfig.basicProfessionSalaries);

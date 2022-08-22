@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { PayrollContainerComponent } from './payroll/payroll-container/payroll-container.component';
 import { PayrollFormComponent } from './payroll/payroll-form/payroll-form.component';
 import { payrollFeatureKey } from './payroll/store/payroll.state';
-import { payrollReducer } from './payroll/store/payroll.reducers';
+import { payrollReducers } from './payroll/store/payroll.reducers';
 import { AppConfigValue, APP_CONFIG } from './app.config';
 import { PayrollCalculationResultComponent } from './payroll/payroll-calculation-result/payroll-calculation-result.component';
 import { environment } from '../environments/environment';
@@ -38,7 +38,7 @@ import { CurrencyUnitPipe } from './shared/currency-unit.pipe';
     NbInputModule,
     NbSelectModule,
     BrowserModule,
-    StoreModule.forRoot({ [payrollFeatureKey]: payrollReducer }),
+    StoreModule.forRoot({ [payrollFeatureKey]: payrollReducers }),
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
