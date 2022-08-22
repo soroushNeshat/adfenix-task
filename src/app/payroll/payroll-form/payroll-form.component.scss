@@ -1,0 +1,21 @@
+.form-control {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    >label {
+        flex-basis: 10rem;
+        flex-shrink: 0;
+    }
+
+    >label+* {
+        min-width: 15rem;
+        flex-grow: 1;
+        max-width: unset;
+    }
+}
+
+button[type=submit] {
+    margin-top: 1.5rem;
+}

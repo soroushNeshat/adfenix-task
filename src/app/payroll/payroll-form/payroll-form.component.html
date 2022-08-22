@@ -1,0 +1,25 @@
+<form #form="ngForm" (ngSubmit)="formSubmit.emit(form.value)">
+    <div class="form-control">
+        <label>Years Of Experience</label>
+        <app-unsigned-integer-input required ngModel name="yearsOfExperience"></app-unsigned-integer-input>
+    </div>
+    <div class="form-control">
+        <label>Profession</label>
+        <nb-select required ngModel name="profession">
+            <nb-option *ngFor="let profession of metadata.professions" [value]="profession">{{ profession }}</nb-option>
+        </nb-select>
+    </div>
+    <div class="form-control">
+        <label>City</label>
+        <nb-select required ngModel name="city">
+            <nb-option *ngFor="let city of metadata.cities" [value]="city">{{ city }}</nb-option>
+        </nb-select>
+    </div>
+    <div class="form-control">
+        <label>Year</label>
+        <nb-select required ngModel name="year">
+            <nb-option *ngFor="let year of metadata.years" [value]="year">{{ year }}</nb-option>
+        </nb-select>
+    </div>
+    <button nbButton fullWidth status="primary" type="submit" [disabled]="form.invalid">Calculate</button>
+</form>

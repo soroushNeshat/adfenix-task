@@ -1,0 +1,32 @@
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.5rem;
+
+    >span {
+        font-weight: bold;
+
+        &.plus {
+            color: var(--green-color-500);
+        }
+
+        &.minus {
+            color: var(--red-color-500);
+        }
+    }
+
+    >span:first-child {
+        flex-shrink: 0;
+    }
+
+    >span:nth-child(2) {
+        text-align: end;
+        flex-grow: 1;
+    }
+
+    &:nth-child(2n + 1) {
+        background-color: var(--basic-color-500);
+    }
+}

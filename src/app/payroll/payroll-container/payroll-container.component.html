@@ -1,0 +1,12 @@
+<nb-card>
+    <nb-card-body>
+        <app-payroll-form *ngIf="formMetadata$ | async as formMetadata" [metadata]="formMetadata"
+            (formSubmit)="formSubmitHandler($event)">
+        </app-payroll-form>
+        <ng-container *ngIf="calculationResult$ | async as calculationResult">
+            <hr>
+            <app-payroll-calculation-result [appScrollIntoView]="scrollIntoResult$" [result]="calculationResult">
+            </app-payroll-calculation-result>
+        </ng-container>
+    </nb-card-body>
+</nb-card>

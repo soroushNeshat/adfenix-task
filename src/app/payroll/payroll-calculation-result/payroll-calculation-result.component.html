@@ -1,0 +1,28 @@
+<div class="info">
+    <span>Basic Salary</span>
+    <span class="plus">{{ result.basicSalary | number:numberPipeConfig | currencyUnit: result.currencyUnit }}</span>
+</div>
+<div class="info">
+    <span>Bonus Salary</span>
+    <span class="plus">{{ result.bonusSalary | number:numberPipeConfig | currencyUnit: result.currencyUnit }}</span>
+</div>
+<div class="info">
+    <span>Gross Salary</span>
+    <span class="plus">{{ result.grossSalary | number:numberPipeConfig | currencyUnit: result.currencyUnit }}</span>
+</div>
+<div class="info">
+    <span>Basic Tax</span>
+    <span class="minus">{{ result.basicTax | number:numberPipeConfig | currencyUnit: result.currencyUnit }}</span>
+</div>
+<div class="info">
+    <span>High Income Tax</span>
+    <span class="minus">{{ result.highIncomeTax | number:numberPipeConfig | currencyUnit: result.currencyUnit }}</span>
+</div>
+<div class="info">
+    <span>Total Tax</span>
+    <span class="minus">{{ result.totalTax | number:numberPipeConfig | currencyUnit: result.currencyUnit }}</span>
+</div>
+<div class="info">
+    <span>Net Salary</span>
+    <span>{{ result.netSalary | number:numberPipeConfig | currencyUnit: result.currencyUnit }}</span>
+</div>
