@@ -1,28 +1,28 @@
 <div class="info">
     <span>Basic Salary</span>
-    <span class="plus">{{ result.basicSalary | number | currencyUnit }}</span>
+    <span class="plus">{{ result.basicSalary | number | currencyUnit: result.currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Bonus Salary</span>
-    <span class="plus">{{ result.bonusSalary | number | currencyUnit }}</span>
+    <span class="plus">{{ result.bonusSalary | number | currencyUnit: result.currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Gross Salary</span>
-    <span class="plus">{{ result.grossSalary | number | currencyUnit }}</span>
+    <span class="plus">{{ result.grossSalary | number | currencyUnit: result.currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Basic Tax</span>
-    <span class="minus">{{ result.basicTax | number | currencyUnit }}</span>
+    <span class="minus">{{ result.basicTax | number | currencyUnit: result.currencyUnit }}</span>
 </div>
 <div class="info">
     <span>High Income Tax</span>
-    <span class="minus">{{ result.highIncomeTax | number | currencyUnit }}</span>
+    <span class="minus">{{ result.highIncomeTax | number | currencyUnit: result.currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Total Tax</span>
-    <span class="minus">{{ result.totalTax | number | currencyUnit }}</span>
+    <span class="minus">{{ result.totalTax | number | currencyUnit: result.currencyUnit }}</span>
 </div>
 <div class="info">
     <span>Net Salary</span>
-    <span>{{ result.netSalary | number | currencyUnit  }}</span>
+    <span>{{ result.netSalary | number | currencyUnit: result.currencyUnit }}</span>
 </div>

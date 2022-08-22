@@ -50,7 +50,8 @@ export const payrollReducer = createReducer(
                 basicTax,
                 highIncomeTax,
                 totalTax,
-                netSalary
+                netSalary,
+                currencyUnit: appConfig.currencyUnit
             }
         };
     })

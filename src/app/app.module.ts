@@ -16,9 +16,9 @@ import { payrollReducer } from './payroll/store/payroll.reducers';
 import { AppConfigValue, APP_CONFIG } from './app.config';
 import { PayrollCalculationResultComponent } from './payroll/payroll-calculation-result/payroll-calculation-result.component';
 import { environment } from '../environments/environment';
-import { CurrencyUnitPipe } from './shared/currency-unit.pipe';
 import { UnsignedIntegerInputComponent } from './shared/unsigned-integer-input/unsigned-integer-input.component';
 import { ScrollIntoViewDirective } from './shared/scroll-into-view.directive';
+import { CurrencyUnitPipe } from './shared/currency-unit.pipe';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,8 @@ import { ScrollIntoViewDirective } from './shared/scroll-into-view.directive';
     PayrollFormComponent,
     PayrollCalculationResultComponent,
     UnsignedIntegerInputComponent,
-    CurrencyUnitPipe,
-    ScrollIntoViewDirective
+    ScrollIntoViewDirective,
+    CurrencyUnitPipe
   ],
   imports: [
     NbCardModule,

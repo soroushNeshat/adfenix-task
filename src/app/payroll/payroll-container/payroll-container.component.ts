@@ -17,7 +17,7 @@ import { selectCalculationResult, selectFormMetadata } from '../store/payroll.se
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PayrollContainerComponent implements OnInit {
-  readonly scrollIntoResultElement$ = new ReplaySubject<void>();
+  readonly scrollIntoResult$ = new ReplaySubject<void>();
   readonly formMetadata$: Observable<FormMetadata>;
   readonly calculationResult$: Observable<CalculationResult>;
 
@@ -26,7 +26,7 @@ export class PayrollContainerComponent implements OnInit {
     @Inject(APP_CONFIG) private readonly appConfig: AppConfig
   ) {
     this.formMetadata$ = this._store.select(selectFormMetadata);
-    this.calculationResult$ = this._store.select(selectCalculationResult).pipe(tap(() => this.scrollIntoResultElement$.next()));
+    this.calculationResult$ = this._store.select(selectCalculationResult).pipe(tap(() => this.scrollIntoResult$.next()));
   }
 
   ngOnInit(): void {

@@ -42,7 +42,7 @@ export const APP_CONFIG = new InjectionToken<AppConfig>('AppConfig');
 
 export const AppConfigValue: AppConfig = {
     basicProfessionSalaries: {
-        Developer: 30001,
+        Developer: 30000,
         Teacher: 27000,
         Cashier: 25000
     },

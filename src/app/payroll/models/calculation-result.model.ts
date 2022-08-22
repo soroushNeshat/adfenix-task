@@ -6,4 +6,5 @@ export interface CalculationResult {
     highIncomeTax: number;
     totalTax: number;
     netSalary: number;
+    currencyUnit: string;
 }
