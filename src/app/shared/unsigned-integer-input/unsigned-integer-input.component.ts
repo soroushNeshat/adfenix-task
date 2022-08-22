@@ -12,7 +12,7 @@ import { pairwise, startWith } from 'rxjs/operators';
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => UnsignedIntegerInputComponent),
-      multi: true,
+      multi: true
     }
   ]
 })
