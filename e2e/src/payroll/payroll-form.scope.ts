@@ -10,7 +10,7 @@ export class PayrollFormScope {
   readonly yearInput: SelectorScope;
 
   constructor(private readonly _root: ElementFinder) {
-    this._submitButton = this._root.element(by.css('button[type=submit]'));;
+    this._submitButton = this._root.element(by.css('button[type=submit]'));
     this.yearsOfExperienceInput = new UnisgnedIntegerInputScope(this._root.element(by.css('app-unsigned-integer-input[name=yearsOfExperience]')));
     this.professionInput = new SelectorScope(this._root.element(by.css('nb-select[name=profession]')));
     this.cityInput = new SelectorScope(this._root.element(by.css('nb-select[name=city]')));

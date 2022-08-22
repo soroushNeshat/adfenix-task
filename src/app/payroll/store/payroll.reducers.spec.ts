@@ -1,7 +1,7 @@
-import { AppConfig } from "src/app/app.config";
-import { calculateResultAction } from "./payroll.actions";
-import { payrollReducers } from "./payroll.reducers";
-import { PayrollState } from "./payroll.state";
+import { AppConfig } from 'src/app/app.config';
+import { calculateResultAction } from './payroll.actions';
+import { payrollReducers } from './payroll.reducers';
+import { PayrollState } from './payroll.state';
 
 describe('PayrollCalculationResultComponent', () => {
   const initialState: PayrollState = { formMetadata: null, calculationResult: null };
@@ -9,7 +9,7 @@ describe('PayrollCalculationResultComponent', () => {
   it('should calculate result correctly', () => {
     const appConfig: AppConfig = {
       basicProfessionSalaries: {
-        'Driver': 9234
+        Driver: 9234
       },
       salaryIncreaseRates: [
         { from: 0, to: 3, increaseRate: 21 },

@@ -6,7 +6,7 @@ export class PayrollPage {
   private readonly _root: ElementFinder;
   readonly form: PayrollFormScope;
   readonly calculationResult: PayrollCalculationResultScope;
-  
+
   constructor() {
     this._root = element(by.css('app-payroll-container'));
     this.form = new PayrollFormScope(this._root.element(by.css('app-payroll-form')));

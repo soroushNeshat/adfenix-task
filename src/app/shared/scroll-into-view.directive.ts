@@ -13,7 +13,7 @@ export class ScrollIntoViewDirective implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     this._scrollIntoViewSub = this.scrollIntoView$.subscribe(() => {
-      this._elementRef.nativeElement.scrollIntoView({ behavior: "smooth" });
+      this._elementRef.nativeElement.scrollIntoView({ behavior: 'smooth' });
     });
   }
 
